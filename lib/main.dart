@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
- 
+import 'package:food_app/screens/categories_screen.dart';
+
 void main() => runApp(MyApp());
- 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,12 +15,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
- 
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
- 
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('DeliMeals'),
       ),
       body: Center(
-        child: Text('Navegar é preciso!!'),
+        child: CategoriesScreen(),
       ),
     );
   }
