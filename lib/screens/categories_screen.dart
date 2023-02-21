@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/components/category_item.dart';
 import '../data/dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -6,20 +7,19 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView(
-      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 200,
-        childAspectRatio: 3 / 2,
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 20,
+    return Scaffold(
+      appBar: AppBar(title: const Text("Vamos Cozinhar?")),
+      body: GridView(
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
+        children: DUMMY_CATEGORIES.map((cat) {
+          return CategoryItem(cat);
+        }).toList(),
       ),
-      children: <Widget>[
-        ...(DUMMY_CATEGORIES.map((cat) {
-          return Card(
-            child: Text(cat.title),
-          );
-        })).toList()
-      ],
     );
   }
 }
