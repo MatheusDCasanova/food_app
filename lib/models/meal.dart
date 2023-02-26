@@ -40,4 +40,17 @@ class Meal {
     this.isLactoseFree = false,
     this.isVegetarian = false,
   });
+
+  String get complexityText {
+    switch (complexity) {
+      case Complexity.Simple:
+        return 'Simple';
+      case Complexity.Medium:
+        return 'Medium';
+      case Complexity.Difficult:
+        return 'Difficult';
+      default:
+        return 'Complexidade Desconhecida';
+    }
+  }
 }
