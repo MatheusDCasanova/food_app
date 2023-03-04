@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'RobotoCondensed',
               ),
             ),
+        useMaterial3: true,
       ),
       routes: {
         AppRoutes.HOME: (context) => const CategoriesScreen(),

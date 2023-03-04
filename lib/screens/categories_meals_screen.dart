@@ -13,8 +13,11 @@ class CategoriesMealsScreen extends StatelessWidget {
         .toList();
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('${category.title}'),
+        backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Colors.white,
       ),
       body: ListView.builder(
         itemCount: categoryMeals.length,

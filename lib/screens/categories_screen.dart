@@ -8,7 +8,11 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Vamos Cozinhar?")),
+      appBar: AppBar(
+        title: const Text("Vamos Cozinhar?"),
+        backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Colors.white,
+      ),
       body: GridView(
         padding: const EdgeInsets.all(25),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -21,6 +25,7 @@ class CategoriesScreen extends StatelessWidget {
           return CategoryItem(cat);
         }).toList(),
       ),
+      backgroundColor: Colors.white,
     );
   }
 }
